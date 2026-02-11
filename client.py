@@ -3,7 +3,7 @@ import socket
 import threading
 from streamlit.runtime.scriptrunner import add_script_run_ctx
 
-st.set_page_config(page_title="Global Chat", layout="centered", page_icon="💬")
+st.set_page_config(page_title="Global Chat", layout="centered", page_icon="")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -60,4 +60,5 @@ if st.session_state.connected:
             st.session_state.messages.append({"role": "me", "content": f"You: {prompt}"})
             st.rerun()
         except:
+
             pass
